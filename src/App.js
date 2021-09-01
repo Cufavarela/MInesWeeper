@@ -5,12 +5,22 @@ import { Header } from "./Components/Header";
 
 function App() {
   const [newGame, setNewGame] = useState(false);
+  const [foundedMines, setFoundedMines] = useState(0);
 
   return (
     <main>
       <h1>MINESWEEPER</h1>
-      <Header newGame={newGame} setNewGame={setNewGame} />
-      <Board newGame={newGame} setNewGame={setNewGame} />
+      <Header
+        newGame={newGame}
+        setNewGame={setNewGame}
+        foundedMines={foundedMines}
+      />
+      <Board
+        newGame={newGame}
+        setNewGame={setNewGame}
+        setFoundedMines={setFoundedMines}
+        foundedMines={foundedMines}
+      />
     </main>
   );
 }

@@ -3,7 +3,12 @@ import { Square } from "./Square";
 import { size, mines } from "../Assets/Constants";
 import { getAroundTiles } from "./Utils";
 
-export const Board = ({ newGame, setNewGame }) => {
+export const Board = ({
+  newGame,
+  setNewGame,
+  foundedMines,
+  setFoundedMines,
+}) => {
   const [tileMap, setTileMap] = useState([]);
 
   const prepareTileMap = () => {
@@ -43,6 +48,7 @@ export const Board = ({ newGame, setNewGame }) => {
   useEffect(() => {
     if (newGame) {
       setTileMap(prepareTileMap());
+      setFoundedMines(0);
     }
   }, [newGame]);
 
@@ -56,6 +62,8 @@ export const Board = ({ newGame, setNewGame }) => {
             tile={tile}
             updateTileMap={setTileMap}
             tileMap={tileMap}
+            setFoundedMines={setFoundedMines}
+            foundedMines={foundedMines}
           />
         ))}
       </section>

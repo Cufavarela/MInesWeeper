@@ -2,13 +2,23 @@ import Flag from "../Assets/flag.png";
 import Mine from "../Assets/mine.png";
 import { putFlag, revealSquare } from "./Utils";
 
-export const Square = ({ tile, updateTileMap, tileMap, index }) => {
+export const Square = ({
+  tile,
+  updateTileMap,
+  tileMap,
+  index,
+  setFoundedMines,
+  foundedMines,
+}) => {
   const handleRightClick = (e, tile) => {
     e.preventDefault();
     const updatedTile = putFlag(tile);
     const boardCopy = tileMap.slice();
     boardCopy.splice(index, 1, updatedTile);
     updateTileMap(boardCopy);
+    if (tile.hasMine) {
+      setFoundedMines(foundedMines + 1);
+    }
   };
 
   const handleLeftClick = (tile) => {
