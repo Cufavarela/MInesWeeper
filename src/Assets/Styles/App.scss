@@ -1,0 +1,53 @@
+html,
+body,
+#root {
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--size), 30px);
+  grid-template-rows: repeat(var(--size), 30px);
+  gap: 2px;
+  background-color: rgb(197, 197, 197);
+}
+
+.faceDown {
+  background-color: rgb(156, 156, 156);
+}
+
+.visible {
+  background-color: rgb(212, 212, 212);
+}
+
+.square {
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+}
+
+.buttonContainer {
+  margin-bottom: 10px;
+  text-align: center;
+  button {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
