@@ -9,18 +9,20 @@ function App() {
 
   return (
     <main>
-      <h1>MINESWEEPER</h1>
-      <Header
-        newGame={newGame}
-        setNewGame={setNewGame}
-        foundedMines={foundedMines}
-      />
-      <Board
-        newGame={newGame}
-        setNewGame={setNewGame}
-        setFoundedMines={setFoundedMines}
-        foundedMines={foundedMines}
-      />
+      <div className="gameContainer">
+        <h1>MINESWEEPER</h1>
+        <Header
+          newGame={newGame}
+          setNewGame={setNewGame}
+          foundedMines={foundedMines}
+        />
+        <Board
+          newGame={newGame}
+          setNewGame={setNewGame}
+          setFoundedMines={setFoundedMines}
+          foundedMines={foundedMines}
+        />
+      </div>
     </main>
   );
 }
