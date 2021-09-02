@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--size), 30px);
+  grid-template-rows: repeat(var(--size), 30px);
+  gap: 2px;
+  background-color: rgb(197, 197, 197);
+}
+
+.faceDown {
+  background-color: rgb(156, 156, 156);
+}
+
+.visible {
+  background-color: rgb(212, 212, 212);
+}
+
+.square {
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+}

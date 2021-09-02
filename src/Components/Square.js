@@ -1,6 +1,6 @@
 import Flag from "../Assets/flag.png";
 import Mine from "../Assets/mine.png";
-import { putFlag, revealSquare } from "./Utils";
+import { gameLost, putFlag, revealSquare } from "./Utils";
 
 export const Square = ({
   tile,
@@ -22,7 +22,13 @@ export const Square = ({
   };
 
   const handleLeftClick = (tile) => {
-    revealSquare(tileMap, tile, index, updateTileMap);
+    const boardCopy = tileMap.slice();
+    if (tile.hasMine) {
+      gameLost(tileMap, updateTileMap);
+    } else {
+      let revealedSquares = revealSquare(boardCopy, index);
+      updateTileMap(revealedSquares);
+    }
   };
 
   return (

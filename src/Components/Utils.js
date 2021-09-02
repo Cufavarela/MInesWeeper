@@ -1,3 +1,5 @@
+import { size } from "../Assets/Constants";
+
 export const getAroundTiles = (index, size) => {
   const gridSize = size * size;
   const aroundTiles = [
@@ -24,16 +26,36 @@ export const getAroundTiles = (index, size) => {
     .filter((tile) => tile !== null);
 };
 
-export const revealSquare = (tileMap, tile, index, updateTileMap) => {
-  const updatedTile = { ...tile, faceDown: false };
-  if (tile.faceDown) {
-    const boardCopy = tileMap.slice();
-    boardCopy.splice(index, 1, updatedTile);
-    updateTileMap(boardCopy);
-    if (tile.hasMine) {
-      gameLost(tileMap, updateTileMap);
-    }
+export const revealSquare = (boardCopy, index) => {
+  if (!boardCopy[index].faceDown) {
+    return boardCopy;
   }
+
+  let flipped = [];
+  flipped.push({ ...boardCopy[index], index: index });
+  while (flipped.length !== 0) {
+    let one = flipped.pop();
+
+    if (one.faceDown) {
+      boardCopy[one.index].faceDown = false;
+    }
+    if (one.minesAround !== 0) {
+      break;
+    }
+
+    const surroundedTiles = getAroundTiles(one.index, size);
+    surroundedTiles.forEach((item) => {
+      if (boardCopy[item].minesAround === 0 && boardCopy[item].faceDown) {
+        flipped.push({ ...boardCopy[item], index: item });
+      }
+    });
+    surroundedTiles.forEach((item) => {
+      if (boardCopy[item].faceDown) {
+        boardCopy[item].faceDown = false;
+      }
+    });
+  }
+  return boardCopy;
 };
 
 export const putFlag = (tile) => {
@@ -41,7 +63,7 @@ export const putFlag = (tile) => {
   return newTile;
 };
 
-const gameLost = (tileMap, updateTileMap) => {
+export const gameLost = (tileMap, updateTileMap) => {
   const revealedMap = tileMap.map((item) => ({ ...item, faceDown: false }));
   updateTileMap(revealedMap);
 };

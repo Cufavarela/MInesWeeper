@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.minesCounter {
+  background-color: black;
+  padding: 10px 20px;
+  color: red;
+  font-weight: bold;
+}
+
+.emojiPlace {
+  padding: 10px;
+  border: 1px solid rgb(156, 156, 156);
+  background-color: rgb(212, 212, 212);
+}
+
+.buttonContainer {
+  button {
+    height: 100%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
