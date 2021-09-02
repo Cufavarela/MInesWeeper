@@ -1,4 +1,4 @@
-# MinesWeeper chanllengue 💥
+# MinesWeeper challengue 💥
 
 Made this with _React JS_.
 
