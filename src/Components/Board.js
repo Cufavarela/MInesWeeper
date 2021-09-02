@@ -24,7 +24,10 @@ export const Board = ({
     setNewGame(false);
 
     while (minesIndex.length < mines) {
-      minesIndex.push(Math.floor(Math.random() * gridAmount));
+      let newMineIndex = Math.floor(Math.random() * gridAmount);
+      if (!minesIndex.includes(newMineIndex)) {
+        minesIndex.push(newMineIndex);
+      }
     }
     minesIndex
       .filter((item, index, self) => self.indexOf(item) === index)
