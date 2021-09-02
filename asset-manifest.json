@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MInesWeeper/static/css/main.7e839b41.chunk.css",
+    "main.js": "/MInesWeeper/static/js/main.e80cd245.chunk.js",
+    "main.js.map": "/MInesWeeper/static/js/main.e80cd245.chunk.js.map",
+    "runtime-main.js": "/MInesWeeper/static/js/runtime-main.66bb9f8c.js",
+    "runtime-main.js.map": "/MInesWeeper/static/js/runtime-main.66bb9f8c.js.map",
+    "static/js/2.1ec82042.chunk.js": "/MInesWeeper/static/js/2.1ec82042.chunk.js",
+    "static/js/2.1ec82042.chunk.js.map": "/MInesWeeper/static/js/2.1ec82042.chunk.js.map",
+    "index.html": "/MInesWeeper/index.html",
+    "static/css/main.7e839b41.chunk.css.map": "/MInesWeeper/static/css/main.7e839b41.chunk.css.map",
+    "static/js/2.1ec82042.chunk.js.LICENSE.txt": "/MInesWeeper/static/js/2.1ec82042.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/MInesWeeper/static/media/BG.232d767f.jpg",
+    "static/media/flag.e33017d2.png": "/MInesWeeper/static/media/flag.e33017d2.png",
+    "static/media/mine.7e901939.png": "/MInesWeeper/static/media/mine.7e901939.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66bb9f8c.js",
+    "static/js/2.1ec82042.chunk.js",
+    "static/css/main.7e839b41.chunk.css",
+    "static/js/main.e80cd245.chunk.js"
+  ]
+}
