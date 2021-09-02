@@ -37,7 +37,9 @@ export const revealSquare = (boardCopy, index) => {
     let one = flipped.pop();
 
     if (one.faceDown) {
-      boardCopy[one.index].faceDown = false;
+      const openTile = { ...boardCopy[one.index], faceDown: false };
+      boardCopy.splice(one.index, 1, openTile);
+      one.faceDown = false;
     }
     if (one.minesAround !== 0) {
       break;
@@ -48,10 +50,9 @@ export const revealSquare = (boardCopy, index) => {
       if (boardCopy[item].minesAround === 0 && boardCopy[item].faceDown) {
         flipped.push({ ...boardCopy[item], index: item });
       }
-    });
-    surroundedTiles.forEach((item) => {
       if (boardCopy[item].faceDown) {
-        boardCopy[item].faceDown = false;
+        const openTile = { ...boardCopy[item], faceDown: false };
+        boardCopy.splice(item, 1, openTile);
       }
     });
   }
