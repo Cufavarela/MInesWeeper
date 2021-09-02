@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MInesWeeper/static/css/main.7e839b41.chunk.css",
-    "main.js": "/MInesWeeper/static/js/main.e80cd245.chunk.js",
-    "main.js.map": "/MInesWeeper/static/js/main.e80cd245.chunk.js.map",
+    "main.js": "/MInesWeeper/static/js/main.5c42df2c.chunk.js",
+    "main.js.map": "/MInesWeeper/static/js/main.5c42df2c.chunk.js.map",
     "runtime-main.js": "/MInesWeeper/static/js/runtime-main.66bb9f8c.js",
     "runtime-main.js.map": "/MInesWeeper/static/js/runtime-main.66bb9f8c.js.map",
     "static/js/2.1ec82042.chunk.js": "/MInesWeeper/static/js/2.1ec82042.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.66bb9f8c.js",
     "static/js/2.1ec82042.chunk.js",
     "static/css/main.7e839b41.chunk.css",
-    "static/js/main.e80cd245.chunk.js"
+    "static/js/main.5c42df2c.chunk.js"
   ]
 }
